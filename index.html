@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Submit Your Review</h1>
+
+        <!-- Form to submit a review using $.ajax -->
+        <form id="reviewFormAjax" class="review-form">
+            <h3>Submit Review (using $.ajax)</h3>
+            <label for="reviewerNameAjax">Your Name:</label>
+            <input type="text" id="reviewerNameAjax" name="reviewerNameAjax" required><br><br>
+
+            <label for="reviewTextAjax">Your Review:</label><br>
+            <textarea id="reviewTextAjax" name="reviewTextAjax" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit" class="submit-btn">Submit using $.ajax</button>
+        </form>
+
+        <!-- Form to submit a review with $.post -->
+        <form id="reviewFormPost" class="review-form">
+            <h3>Submit Review (using $.post)</h3>
+            <label for="reviewerNamePost">Your Name:</label>
+            <input type="text" id="reviewerNamePost" name="reviewerNamePost" required><br><br>
+
+            <label for="reviewTextPost">Your Review:</label><br>
+            <textarea id="reviewTextPost" name="reviewTextPost" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit" class="submit-btn">Submit using $.post</button>
+        </form>
+
+        <!-- Buttons to retrieve data -->
+        <div class="button-container">
+            <button id="fetchReviewsButton" class="fetch-btn">Fetch Reviews (using $.get)</button><br><br>
+            <button id="fetchReviewsJsonButton" class="fetch-btn">Fetch Reviews (using $.getJSON)</button>
+        </div>
+
+        <div id="statusMessage" class="status-message"></div>
+    </div>
+
+    <script src="submitReview.js"></script>
+</body>
+</html>
